@@ -3,6 +3,9 @@ package io.zipcoder;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MusicTest {
 
     @Test
@@ -26,6 +29,16 @@ public class MusicTest {
         String selection = "liveoak";
         Integer expected = 1;
         Integer actual = music.selection(startingIndex, selection);
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void getIndexTest(){
+        String[] playlist = {"dancinginthedark","rio","liveoak","liveoak"};
+        Music music = new Music(playlist);
+        ArrayList<Integer> expected = new ArrayList<>(List.of(2, 3));
+        
+        ArrayList<Integer> actual = music.getIndex("liveoak");
+
         Assert.assertEquals(expected, actual);
     }
 }
