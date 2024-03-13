@@ -2,6 +2,7 @@ package io.zipcoder;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Music {
 
@@ -12,6 +13,8 @@ public class Music {
     }
 
     public Integer selection(Integer startIndex, String selection){
+        List<Integer> indexes = new ArrayList<>();
+
         return null;
     }
     public ArrayList<Integer> getIndex(String selection) {
