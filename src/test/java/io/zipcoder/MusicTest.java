@@ -41,4 +41,31 @@ public class MusicTest {
 
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testGetNumJumps(){
+        // Given
+        String[] playList = {"dancinginthedark","rio","liveoak","liveoak", "Longview", "When I come around"};
+        Music music = new Music(playList);
+        Integer expected = 2;
+
+        // When
+        Integer actual = music.getNumJumps(1, 5);
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testGetNumJumps1(){
+        // Given
+        String[] playList = {"dancinginthedark","rio","liveoak","liveoak", "Longview", "When I come around"};
+        Music music = new Music(playList);
+        Integer expected = 1;
+
+        // When
+        Integer actual = music.getNumJumps(4, 5);
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
 }
