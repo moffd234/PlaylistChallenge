@@ -1,7 +1,6 @@
 package io.zipcoder;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Music {
