@@ -36,7 +36,8 @@ public class Music {
         while(forward != endIndex){
             forward++;
             forwardCounter++;
-            // Send forward back to the beginning of the playlist
+
+            // Send forward to the beginning of the playlist
             if(forward > playList.length - 1){
                 forward = 0;
             }
@@ -47,6 +48,8 @@ public class Music {
         while(backward != endIndex){
             backward--;
             backwardsCounter++;
+
+            // Send backwards to the end of the playlist
             if(backward < 0){
                 backward = playList.length - 1;
             }
