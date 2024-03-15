@@ -13,9 +13,19 @@ public class Music {
     }
 
     public Integer selection(Integer startIndex, String selection){
-        List<Integer> indexes = new ArrayList<>();
+        List<Integer> indexes = getIndex(selection);
+        int minJumps = Integer.MAX_VALUE;
+        for(Integer i : indexes){
+            // Get number of jumps for current index
+            int currentNumJumps = getNumJumps(startIndex, i);
 
-        return null;
+            // Check if the new numJumps should be the new minNumJumps
+            if(currentNumJumps < minJumps){
+                minJumps = currentNumJumps;
+            }
+        }
+
+        return minJumps;
     }
 
     // Gets all indexes at which the song resides
